@@ -1,10 +1,11 @@
 import React from "react";
+import Hero from "./sections/Hero";
 
 const App = () => {
   return (
-    <main>
-      <div className="text-4xl font-bold">Welcome to my 3D Portfolio</div>
-    </main>
+    <>
+      <Hero />
+    </>
   );
 };
 
