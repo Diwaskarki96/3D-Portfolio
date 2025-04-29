@@ -1,11 +1,9 @@
 import React from "react";
+import { words } from "../constants";
+import Button from "../components/Button";
+import HeroExperience from "../components/HeroModels/HeroExperience";
 
 const Hero = () => {
-  const words = [
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    // { text: "Ideas", imgPath: "/images/ideas.svg" },
-  ];
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
@@ -14,7 +12,7 @@ const Hero = () => {
       <div>
         {/* {LEFT: HERO CONTENT} */}
         <header className="flex flex-col justify-center md:w-full w-screen md:px:20 px-5"></header>
-        {/* {RIGHT: HERO CONTENT} */}
+
         <div className="flex flex-col gap-7">
           <div className="hero-text">
             <h1>
@@ -37,10 +35,26 @@ const Hero = () => {
                 </span>
               </span>
             </h1>
+
             <h1>into Real Projects</h1>
             <h1>that Deliver Results</h1>
           </div>
+          <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+            Hi, I'm Diwash Karki, a developer based in Kathmandu with a passion
+            for code.
+          </p>
+          <Button
+            className="md:w-80 md:h-16 w-60 h-12"
+            id="button"
+            text="See my Work"
+          />
         </div>
+        {/* RIGHT: 3D Model */}
+        <figure>
+          <div className="hero-3d-layout border-red-200 border-2">
+            <HeroExperience />
+          </div>
+        </figure>
       </div>
     </section>
   );
